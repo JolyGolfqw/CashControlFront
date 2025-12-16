@@ -11,7 +11,7 @@ type PeriodFilter = "all" | "today" | "week" | "month" | "year";
 
 const ITEMS_PER_PAGE = 20;
 
-export default function ExpensesPage({ onAdd, onEdit }: Props) {
+export default function ExpensesPage({ onAdd: _onAdd, onEdit }: Props) {
   const { expenses, loading, errors, loadExpenses, removeExpense } = useApp();
   const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
   const [periodFilter, setPeriodFilter] = useState<PeriodFilter>("all");

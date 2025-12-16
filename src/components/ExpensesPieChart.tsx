@@ -5,11 +5,11 @@ import { type CategoryStat } from "../api/statistics";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 type Props = {
-  data: CategoryStat[];
+  data?: CategoryStat[];
 };
 
 export default function ExpensesPieChart({ data }: Props) {
-  if (data.length === 0) {
+  if (!data || data.length === 0) {
     return <p className="panel__empty">Нет данных для отображения</p>;
   }
 

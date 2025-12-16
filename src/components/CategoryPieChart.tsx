@@ -10,11 +10,11 @@ import type { CategoryChartItem } from "../pages/DashboardPage";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 type Props = {
-  categories: CategoryChartItem[];
+  categories?: CategoryChartItem[];
 };
 
 export default function CategoryPieChart({ categories }: Props) {
-  if (categories.length === 0) {
+  if (!categories || categories.length === 0) {
     return <p className="panel__empty">Нет данных для диаграммы</p>;
   }
 

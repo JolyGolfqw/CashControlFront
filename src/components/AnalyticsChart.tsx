@@ -21,10 +21,14 @@ ChartJS.register(
 );
 
 type Props = {
-  data: AnalyticsPoint[];
+  data?: AnalyticsPoint[];
 };
 
 export default function AnalyticsChart({ data }: Props) {
+  if (!data || data.length === 0) {
+    return <p className="panel__empty">Нет данных</p>;
+  }
+
   const chartData: ChartData<"line"> = {
     labels: data.map((d) => d.date.slice(0, 10)),
     datasets: [
