@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { type FormEvent, useState } from "react";
 import { createExpense } from "../api/expense";
 import { useApp } from "../context/AppContext";
 
@@ -7,7 +7,7 @@ type Props = {
 };
 
 export default function AddExpenseForm({ onCreated }: Props) {
-  const { categories, addExpense, loadExpenses, invalidateExpenses } = useApp();
+  const { categories, addExpense, loadExpenses } = useApp();
   const [categoryId, setCategoryId] = useState("");
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
