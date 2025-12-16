@@ -1,8 +1,9 @@
-import { FormEvent, useEffect, useState } from "react";
+import { type FormEvent, useEffect, useState } from "react";
 import {
   createCategory,
   updateCategory,
   deleteCategory,
+  type Category,
 } from "../api/categories";
 import { useApp } from "../context/AppContext";
 import { debug } from "../debug";
@@ -14,7 +15,6 @@ type Props = {
 export default function CategoriesPage({ onChange }: Props) {
   const { 
     categories, 
-    loading, 
     loadCategories, 
     addCategory, 
     removeCategory: removeCategoryState,

@@ -1,4 +1,4 @@
-import { useEffect, useState, FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import BudgetSummary from "../components/BudgetSummary";
 import BudgetWarning from "../components/BudgetWarning";
 import { createBudget, updateBudget, deleteBudget } from "../api/budget";
