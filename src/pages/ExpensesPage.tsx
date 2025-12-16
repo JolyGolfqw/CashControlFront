@@ -150,11 +150,6 @@ export default function ExpensesPage({ onAdd, onEdit }: Props) {
           <p className="panel__eyebrow">Расходы</p>
           <h2 className="panel__title">Мои расходы</h2>
         </div>
-        <div className="panel__header-actions">
-          <button type="button" className="btn btn--primary" onClick={onAdd}>
-            + Добавить
-          </button>
-        </div>
       </div>
 
       {/* Фильтры и сортировка */}

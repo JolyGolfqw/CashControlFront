@@ -119,7 +119,7 @@ export default function DashboardPage() {
         <p className="panel__empty">Бюджет на текущий месяц не задан</p>
       )}
 
-      {analytics.length > 0 && (
+      {(Array.isArray(analytics) && analytics.length > 0) && (
         <>
           <div style={{ marginTop: "2rem" }}>
             <p className="panel__title panel__title--small" style={{ marginBottom: "1rem" }}>Тренды расходов</p>
