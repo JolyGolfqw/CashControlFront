@@ -43,11 +43,11 @@ export default function AnalyticsPage() {
         <p className="form-error">{errors.analytics}</p>
       )}
 
-      {!loading.analytics && !errors.analytics && analytics.length === 0 && (
+      {!loading.analytics && !errors.analytics && Array.isArray(analytics) && analytics.length === 0 && (
         <p className="panel__empty">Нет данных</p>
       )}
 
-      {!loading.analytics && !errors.analytics && analytics.length > 0 && (
+      {!loading.analytics && !errors.analytics && Array.isArray(analytics) && analytics.length > 0 && (
         <AnalyticsChart data={analytics} />
       )}
     </section>
